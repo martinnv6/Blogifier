@@ -17,7 +17,7 @@ namespace Core.Data
                 Email = "admin@us.com",
                 DisplayName = "Administrator",
                 Avatar = "data/admin/avatar.png",
-                Bio = "<p>Something about <b>administrator</b>, maybe HTML or markdown formatted text goes here.</p><p>Should be customizable and editable from user profile.</p>",
+                Bio = "<p>Algo sobre <b>administrador</b>, quiza algun HTML o algun texto con formato deberia ir aqui.</p><p>Deberia ser customizable y editable desde el perfil del usuario.</p>",
                 IsAdmin = true,
                 Created = DateTime.UtcNow.AddDays(-120)
             });
@@ -27,7 +27,7 @@ namespace Core.Data
                 AppUserName = "demo",
                 Email = "demo@us.com",
                 DisplayName = "Demo user",
-                Bio = "Short description about this user and blog.",
+                Bio = "Descripcion corta sobre este usuario y el blog.",
                 Created = DateTime.UtcNow.AddDays(-110)
             });
 
@@ -38,8 +38,8 @@ namespace Core.Data
 
             context.BlogPosts.Add(new BlogPost
             {
-                Title = "Welcome to Blogifier!",
-                Slug = "welcome-to-blogifier!",
+                Title = "Bienvenido al Blog!",
+                Slug = "welcome-to-blog!",
                 Description = SeedData.FeaturedDesc,
                 Content = SeedData.PostWhatIs,
                 Categories = "welcome,blog",
@@ -53,9 +53,9 @@ namespace Core.Data
 
             context.BlogPosts.Add(new BlogPost
             {
-                Title = "Blogifier Features",
-                Slug = "blogifier-features",
-                Description = "List of the main features supported by Blogifier, includes user management, content management, markdown editor, simple search and others. This is not the full list and work in progress.",
+                Title = "Funcionalidades del blog",
+                Slug = "blog-features",
+                Description = "Lista de funcionalidades principales soportadas, incluidas administracio de usuarios, de contenido, busquedas simples etc. Esta no es la lista completa aun esta pendiente terminarla.",
                 Content = SeedData.PostFeatures,
                 Categories = "blog",
                 AuthorId = adminId,
@@ -69,7 +69,7 @@ namespace Core.Data
             {
                 Title = "Demo post",
                 Slug = "demo-post",
-                Description = "This demo site is a sandbox to test Blogifier features. It runs in-memory and does not save any data, so you can try everything without making any mess. Have fun!",
+                Description = "Este es un sitio demo para probar el blog. Funciona en memoria y no guarda nada, entonces puedes probar lo que tu quieras.",
                 Content = SeedData.PostDemo,
                 AuthorId = demoId,
                 Cover = "data/demo/demo-cover.jpg",
@@ -80,10 +80,10 @@ namespace Core.Data
 
             context.Notifications.Add(new Notification
             {
-                Notifier = "Blogifier",
+                Notifier = "Blog Somos de Cadereyta",
                 AlertType = AlertType.System,
                 AuthorId = 0,
-                Content = "Welcome to Blogifier!",
+                Content = "Bienvenido al blog Somos de Cadereyta!",
                 Active = true,
                 DateNotified = SystemClock.Now()
             });
@@ -94,24 +94,24 @@ namespace Core.Data
 
     public class SeedData
     {
-        public static readonly string FeaturedDesc = @"Blogifier is simple, beautiful, light-weight open source blog written in .NET Core. This cross-platform, highly extendable and customizable web application brings all the best blogging features in small, portable package.
+        public static readonly string FeaturedDesc = @"Este blog es hermoso y liviano escrito en .NET Core. Esta aplicación web multiplataforma, altamente extensible y personalizable ofrece las mejores funciones de blog en un paquete pequeño y portátil.
 
-#### To login:
+#### Para acceder:
 * User: demo
 * Pswd: demo";
 
-        public static readonly string PostWhatIs = @"## What is Blogifier
+        public static readonly string PostWhatIs = @"## Que es Blog Somos de Cadereyta
 
-Blogifier is simple, beautiful, light-weight open source blog written in .NET Core. This cross-platform, highly extendable and customizable web application brings all the best blogging features in small, portable package.
+Este blog es hermoso y liviano escrito en .NET Core. Esta aplicación web multiplataforma, altamente extensible y personalizable ofrece las mejores funciones de blog en un paquete pequeño y portátil.
 
-## System Requirements
+## Requerimientos del sistema
 
 * Windows, Mac or Linux
 * ASP.NET Core 2.1
 * Visual Studio 2017, VS Code or other code editor (Atom, Sublime etc)
 * SQLite by default, MS SQL Server tested, EF compatible databases should work
 
-## Getting Started
+## Comenzar (desarrollador)
 
 1. Clone or download source code
 2. Run application in Visual Studio or using your code editor
@@ -120,29 +120,32 @@ Blogifier is simple, beautiful, light-weight open source blog written in .NET Co
 
 ## Demo site
 
-The [demo site](http://blogifier.azurewebsites.net) is a playground to check out Blogifier features. You can write and publish posts, upload files and test application before install. And no worries, it is just a sandbox and will clean itself.
+El [sitio demo](http://blogsomosdecadereyta.azurewebsites.net) es un patio de recreo para ver las características del blog. Puede escribir y publicar posts, cargar archivos y probar la aplicación antes de la instalación. Y no te preocupes, es solo un arenero y se limpiará solo.
 
 ![Demo-1.png](/data/admin/admin-editor.png)";
 
-        public static readonly string PostFeatures = @"### User Management
-Blogifier is multi-user application with simple admin/user roles, allowing every user write and publish posts and administrator create new users.
+        public static readonly string PostFeatures = @"### Gestión de usuarios
+Este blog es una aplicación multiusuario con funciones simples de administrador / usuario, que permite que cada usuario escriba y publique publicaciones y el administrador cree nuevos usuarios.
 
-### Content Management
-Built-in file manager allows upload images and files and use them as links in the post editor.
+### Gestión de contenido
+El administrador de archivos incorporado permite cargar imágenes y archivos y usarlos como enlaces en el editor de publicaciones.
 
 ![file-mgr.png](/data/admin/admin-files.png)
 
 ### Plugin System
-Blogifier built as highly extendable application allowing modules to be side-loaded and added to blog at runtime.
+Este blog construido como una aplicación altamente extensible que permite que los módulos se carguen lateralmente y se agreguen al blog en tiempo de ejecución.
 
-### Markdown Editor
-The post editor uses markdown syntax, which many writers prefer over HTML for its simplicity.
+### Editor de markdown
+El editor de publicaciones utiliza la sintaxis de markdown, que muchos escritores prefieren a HTML por su simplicidad.
 
-### Simple Search
-There is simple but quick and functional search in the post lists, as well as search in the image/file list in the file manager.
+### Búsqueda simple
+Hay una búsqueda simple pero rápida y funcional en las listas de publicaciones, así como la búsqueda en la lista de imágenes / archivos en el administrador de archivos.
+
+### Creador
+Martin Navarrete :).
 ";
 
-        public static readonly string PostDemo = @"This demo site is a sandbox to test Blogifier features. It runs in-memory and does not save any data, so you can try everything without making any mess. Have fun!
+        public static readonly string PostDemo = @"Este sitio de demostración es un espacio aislado para probar las características de Blogifier. Se ejecuta en la memoria y no guarda ningún dato, por lo que puede probar todo sin ensuciar. ¡Que te diviertas!
 
 #### To login:
 * User: demo
