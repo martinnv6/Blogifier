@@ -1,20 +1,20 @@
 {
   "socialButtons": [
     {
-			"class": "widget-social-fb",
-      "link": "https://facebook.com/blogifierdotnet",
+      "class": "widget-social-fb",
+      "link": "https://www.facebook.com/SomosDeCadereytaMX/",
       "icon": "fa-facebook",
       "name": "Facebook"
     },
     {
-			"class": "widget-social-tw",
-      "link": "https://twitter.com/blogifierdotnet",
+      "class": "widget-social-tw",
+      "link": "https://www.facebook.com/SomosDeCadereytaMX/",
       "icon": "fa-twitter",
       "name": "Twitter"
     },
     {
-			"class": "widget-social-in",
-      "link": "https://instagram.com/blogifierdotnet",
+      "class": "widget-social-in",
+      "link": "https://www.facebook.com/SomosDeCadereytaMX/",
       "icon": "fa-instagram",
       "name": "Instagram"
     },

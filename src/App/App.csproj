@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Content Include="app_bak.db" CopyToPublishDirectory="PreserveNewest" />
+    <Content Include="app.db" CopyToPublishDirectory="PreserveNewest" />
   </ItemGroup>
  
   <ItemGroup>
