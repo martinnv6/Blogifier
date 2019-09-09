@@ -110,7 +110,7 @@ namespace App
                 setupAction.SwaggerDoc("spec",
                     new Microsoft.OpenApi.Models.OpenApiInfo()
                     {
-                        Title = "Blogifier API",
+                        Title = "Blog API",
                         Version = "1"
                     });
                 setupAction.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, "CoreAPI.xml"));
@@ -150,7 +150,7 @@ namespace App
             {
                 setupAction.SwaggerEndpoint(
                     "/swagger/spec/swagger.json",
-                    "Blogifier API"
+                    "Blog API"
                 );
             });
 

@@ -145,7 +145,7 @@ Hay una búsqueda simple pero rápida y funcional en las listas de publicaciones
 Martin Navarrete :).
 ";
 
-        public static readonly string PostDemo = @"Este sitio de demostración es un espacio aislado para probar las características de Blogifier. Se ejecuta en la memoria y no guarda ningún dato, por lo que puede probar todo sin ensuciar. ¡Que te diviertas!
+        public static readonly string PostDemo = @"Este sitio de demostración es un espacio aislado para probar las características del Blog. Se ejecuta en la memoria y no guarda ningún dato, por lo que puede probar todo sin ensuciar. ¡Que te diviertas!
 
 #### To login:
 * User: demo
